@@ -14,3 +14,5 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 #sudo chmod 755 /usr/local/bin/docker-compose
 sudo apt install docker-compose -y
+
+sudo usermod -aG docker ${USER}
