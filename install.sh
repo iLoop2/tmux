@@ -8,7 +8,6 @@ if [[ $OSTYPE != 'darwin'* ]]; then
   sudo apt install xsel
 fi
 
-
 read -p "Do you like to change to ctrl-b as prefix y/n ? " answer
 case ${answer:0:1} in
     y|Y )
