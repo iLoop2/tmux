@@ -8,10 +8,14 @@ if [[ $OSTYPE != 'darwin'* ]]; then
   sudo apt install xsel
 fi
 
-echo "Do you like to change to ctrl-b as prefix (y/n) ?"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) sed -i -e 's/C-a/C-b/g' ~/.tmux.conf; break;;
-        No ) exit;;
-    esac
-done
+
+read -p "Do you like to change to ctrl-b as prefix (y/n) ? " answer
+case ${answer:0:1} in
+    y|Y )
+        sed -i -e 's/C-a/C-b/g' ~/.tmux.conf; 
+        break;;
+    
+    * )
+        echo ''
+    ;;
+esac
