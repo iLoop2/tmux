@@ -9,7 +9,7 @@ if [[ $OSTYPE != 'darwin'* ]]; then
 fi
 
 
-read -p "Do you like to change to ctrl-b as prefix (y/n) ? " answer
+read -p "Do you like to change to ctrl-b as prefix y/n ? " answer
 case ${answer:0:1} in
     y|Y )
         sed -i -e 's/C-a/C-b/g' ~/.tmux.conf; 
