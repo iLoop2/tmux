@@ -6,7 +6,7 @@ sudo apt install xsel
 or
 sudo dnf install xsel
 
-Run curl https://raw.githubusercontent.com/iLoop2/tmux/main/install.sh | sh
+Run curl https://raw.githubusercontent.com/iLoop2/tmux/main/install.sh | bash
 
 To install docker on Ubuntu 20.04:
 
