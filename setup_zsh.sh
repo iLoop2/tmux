@@ -17,5 +17,7 @@ wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.4/zoxide_0.9.4
 sudo dpkg -i ~/Downloads/zoxide_0.9.4-1_amd64.deb
 
 #Get config files
+rm ~/.zshrc
+rm ~/.p10k.zsh
 wget https://raw.githubusercontent.com/iLoop2/tmux/main/.zshrc -O ~/.zshrc
 wget https://raw.githubusercontent.com/iLoop2/tmux/main/.p10k.zsh -O ~/.p10k.zsh
