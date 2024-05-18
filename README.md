@@ -18,3 +18,13 @@ curl https://raw.githubusercontent.com/iLoop2/tmux/main/install_docker.sh | sh
 To setup rev proxy on port 8080:
 
 curl https://raw.githubusercontent.com/iLoop2/tmux/main/install_nginx.sh | sh
+
+If you like to get a nice zsh setp you can run this:
+
+ curl https://raw.githubusercontent.com/iLoop2/tmux/main/setup_zsh.sh | sh
+
+This zsh setup is my little twist on this setup:
+
+https://github.com/dreamsofautonomy/zensh
+
+If you like to configure the prompt just delete the .p10k.zsh file and you will be prompted to do a reconfig of the prompt
