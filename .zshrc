@@ -75,6 +75,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
+#alias ls='ls --color'
 alias ls=exa
 alias vim='nvim'
 alias c='clear'
@@ -83,3 +84,15 @@ alias ll='ls -la'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+if [ -f /mnt/c/Appl/Npiperelay/npiperelay.exe ]; then
+export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
+ss -a | grep -q $SSH_AUTH_SOCK
+if [ $? -ne 0 ]; then
+    rm -f $SSH_AUTH_SOCK
+    (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"/mnt/c/Appl/Npiperelay/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) > /dev/null 2>&1
+fi
+fi
+
+export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
