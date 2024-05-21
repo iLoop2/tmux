@@ -1,6 +1,15 @@
 #Move old .zshrc config to .zshrc.bck
-mv ~/.zshrc ~/.zshrc.bck
-mkdir ~/Downloads
+if [ -f ~/.zshrc ]; then
+  mv ~/.zshrc ~/.zshrc.bck
+fi
+
+if [ -f ~/.p10k.zsh ]; then
+  mv ~/.p10k.zsh ~/.p10k.zsh.bck
+fi
+
+if [ ! -d  ~/Downloads ]; then
+  mkdir ~/Downloads
+fi
 #Install basic
 sudo apt install zsh
 sudo apt install wget
@@ -20,7 +29,7 @@ wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.4/zoxide_0.9.4
 sudo dpkg -i ~/Downloads/zoxide_0.9.4-1_amd64.deb
 
 #Get config files
-rm ~/.zshrc
+
 rm ~/.p10k.zsh
 wget https://raw.githubusercontent.com/iLoop2/tmux/main/.zshrc -O ~/.zshrc
 wget https://raw.githubusercontent.com/iLoop2/tmux/main/.p10k.zsh -O ~/.p10k.zsh
