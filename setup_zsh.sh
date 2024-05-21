@@ -1,5 +1,6 @@
 #Move old .zshrc config to .zshrc.bck
 mv ~/.zshrc ~/.zshrc.bck
+mkdir Downloads
 #Install basic
 sudo apt install zsh
 sudo apt install wget
