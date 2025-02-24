@@ -15,7 +15,7 @@ sudo apt install zsh
 sudo apt install wget
 
 #Install exa
-sudo apt install exa
+sudo apt install eza
 
 #Install fzf 
 wget https://github.com/junegunn/fzf/releases/download/0.52.1/fzf-0.52.1-linux_amd64.tar.gz -O ~/Downloads/fzf-0.52.1-linux_amd64.tar.gz
