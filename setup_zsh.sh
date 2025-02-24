@@ -11,11 +11,11 @@ if [ ! -d  ~/Downloads ]; then
   mkdir ~/Downloads
 fi
 #Install basic
-sudo apt install zsh
-sudo apt install wget
+sudo apt install zsh -y
+sudo apt install wget -y
 
 #Install exa
-sudo apt install eza
+sudo apt install eza -y
 
 #Install fzf 
 wget https://github.com/junegunn/fzf/releases/download/0.52.1/fzf-0.52.1-linux_amd64.tar.gz -O ~/Downloads/fzf-0.52.1-linux_amd64.tar.gz
