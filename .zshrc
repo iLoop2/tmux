@@ -96,3 +96,5 @@ fi
 
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
